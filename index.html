@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubyah Innovation | Expertise. Commitment. Value.</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0a09; /* Even darker background */
+        }
+        /* Custom accent color */
+        .text-cyan-accent { color: #22d3ee; }
+        .bg-cyan-accent { background-color: #22d3ee; }
+        .hover\:bg-cyan-accent-hover:hover { background-color: #06b6d4; }
+        .border-cyan-accent { border-color: #22d3ee; }
+
+        /* Simple animation for scroll fade-in effect */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero background pattern */
+        .hero-bg {
+            background-color: #0c0a09;
+            background-image:
+                radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 52% 99%, hsla(355, 98%, 76%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 10% 29%, hsla(256, 96%, 68%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.1) 0px, transparent 50%),
+                radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.1) 0px, transparent 50%);
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header and Navigation Bar -->
+    <header class="bg-black/50 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-white">
+                <!-- Dubyah Logo -->
+                <img src="assets/dubyah-logo.png" alt="Dubyah Innovation Logo" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/150x40/000000/FFFFFF?text=Dubyah.';">
+            </a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="hover:text-cyan-accent transition-colors duration-300">Services</a>
+                <a href="#how-we-work" class="hover:text-cyan-accent transition-colors duration-300">How It Works</a>
+                <a href="#principles" class="hover:text-cyan-accent transition-colors duration-300">Principles</a>
+                <a href="#contact" class="hover:text-cyan-accent transition-colors duration-300">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#services" class="block py-2 text-center hover:bg-gray-800 rounded">Services</a>
+            <a href="#how-we-work" class="block py-2 text-center hover:bg-gray-800 rounded">How It Works</a>
+            <a href="#principles" class="block py-2 text-center hover:bg-gray-800 rounded">Principles</a>
+            <a href="#contact" class="block py-2 text-center hover:bg-gray-800 rounded">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg">
+            <div class="container mx-auto px-6 py-24 md:py-40 text-center relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">Consulting is evolving, we're leading the evolution.</h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8">Expertise. Commitment. Value.</p>
+                    <a href="#services" class="bg-cyan-accent hover:bg-cyan-accent-hover text-gray-900 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-block">Explore Our Services</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Intro Section -->
+        <section class="py-20 bg-black fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold max-w-3xl mx-auto">Clients need sharper thinking, faster moves, and true partnership, not just more hours.</h2>
+                 <p class="text-gray-400 mt-6 max-w-3xl mx-auto">No retainer drag. No bloated decks. Just sharp thinking, fast moves, and real outcomes. We help teams solve what matters now, wherever you are in your journey, and get ready for whatever comes next.</p>
+            </div>
+        </section>
+
+        <!-- Services Section ("Our Toolbox") -->
+        <section id="services" class="py-20 fade-in-section bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Our Toolbox</h2>
+                    <p class="text-lg text-gray-400 mt-2">Modular capabilities. Designed to Plug In, Switch on, and Deliver.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card -->
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-accent">01 Innovation Strategy & Facilitation</h3>
+                        <p class="text-gray-400">Opportunity framing, design sprints, stakeholder alignment. We help teams unlock clarity and momentum fast.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-accent">02 Brand Strategy & Future-Fit Systems</h3>
+                        <p class="text-gray-400">From positioning and tone to scalable brand systems. We help you show up, everywhere.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-accent">03 Digital Transformation Advisory</h3>
+                        <p class="text-gray-400">Light-touch guidance for internal tools, process change, and capability building.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-accent">04 Experience & Service Design</h3>
+                        <p class="text-gray-400">Customer journeys, service blueprints, UX flows. Designed for humans, built for scale.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-accent">05 Prototyping & Rapid Validation</h3>
+                        <p class="text-gray-400">Lo-fi to hi-fi mockups, user testing, and concept validation. Fast cycles, clear signals.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2 text-cyan-accent">06 Emerging Tech & Futures Research</h3>
+                        <p class="text-gray-400">Signals, scenarios, and speculative design. We help you explore what's next without losing sight of now.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How We Work Section -->
+        <section id="how-we-work" class="py-20 bg-cyan-accent/10 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent">How we work</p>
+                    <h2 class="text-3xl font-bold text-white mt-2">Plug In. Build Fast. Leave Smarter.</h2>
+                    <p class="text-lg text-gray-400 mt-2 max-w-3xl mx-auto">We don't consult from the sidelines. We plug in fast, get our hands dirty, and move things forward.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">01 We build with you, Not for you.</h3>
+                        <p class="text-gray-400">No black boxes. We co-create with your team to deliver clarity and capability.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">02 Short, Focused Interventions</h3>
+                        <p class="text-gray-400">Not 12-month retainers.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">03 We use what you've already got.</h3>
+                        <p class="text-gray-400">We don't waste time duplicating insights. We validate, refine, and build on what's already working.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">04 We leave behind tools, Not dependency</h3>
+                        <p class="text-gray-400">Our goal is to equip your team to move faster, even after we're gone.</p>
+                    </div>
+                </div>
+                 <p class="text-center text-gray-300 mt-12 max-w-3xl mx-auto">Whether you’re kicking off something new, stuck mid-build, or preparing for scale, we meet you where you are and help you move with purpose.</p>
+            </div>
+        </section>
+
+        <!-- Principles Section ("The Difference That Matters") -->
+        <section id="principles" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">The Difference That Matters.</h2>
+                    <p class="text-lg text-gray-400 mt-2">We don't follow the consulting trends. We're built on them.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+                    <div>
+                        <h3 class="text-xl font-bold text-cyan-accent">01 Fractional Consulting</h3>
+                        <p class="text-gray-400 mt-1">We drop in fast, solve high-impact problems, and get out. Think 2-week sprint, not 12-month retainer.</p>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-bold text-cyan-accent">02 Co-Creation Over Outsourcing</h3>
+                        <p class="text-gray-400 mt-1">We don't hand you a PDF and disappear. We build with your team, not for them.</p>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-bold text-cyan-accent">03 Outcome-Based Engagements</h3>
+                        <p class="text-gray-400 mt-1">We scope by outcomes, not hours. Success = working prototype, validated roadmap, strategic clarity.</p>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-bold text-cyan-accent">04 Tool-Enabled Teams</h3>
+                        <p class="text-gray-400 mt-1">We leave behind the playbooks, canvases, and systems your team can run without us.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-cyan-accent">05 No More Black Boxes</h3>
+                        <p class="text-gray-400 mt-1">We bring you into the process: frameworks, thinking, decisions and all. It's your journey.</p>
+                    </div>
+                     <div>
+                        <h3 class="text-xl font-bold text-cyan-accent">06 Brand + Innovation</h3>
+                        <p class="text-gray-400 mt-1">We don't separate innovation from identity. The future of product is inseparable from voice, culture, and CX.</p>
+                    </div>
+                     <div class="md:col-span-2 lg:col-span-1">
+                        <h3 class="text-xl font-bold text-cyan-accent">07 Micro-Transformations, Big Shifts</h3>
+                        <p class="text-gray-400 mt-1">Small, focused projects like onboarding redesigns or future-fit audits can unlock serious momentum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Clients Section -->
+        <section id="clients" class="py-20 bg-black fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-12 text-white">Who we've worked with</h2>
+                <div class="flex flex-wrap justify-center items-center gap-x-12 md:gap-x-20 gap-y-10">
+                    <!-- Client Logos -->
+                    <img src="assets/the-aurum-institute-logo.png" alt="The Aurum Institute Logo" class="h-24 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/200x60/000000/FFFFFF?text=THE+AURUM+INSTITUTE';">
+                    <img src="assets/tforge-logo.png" alt="TForge Logo" class="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/150x60/000000/FFFFFF?text=TFORGE';">
+                    <img src="assets/axis-solutions-logo.png" alt="Axis Solutions Logo" class="h-24 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/200x60/000000/FFFFFF?text=Axis+Solutions';">
+                    <img src="assets/oryx-it-solutions-logo.png" alt="Oryx IT Solutions Logo" class="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/200x60/000000/FFFFFF?text=ORYX+IT+SOLUTIONS';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 fade-in-section bg-gray-900/50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Let's get started.</h2>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Ready to build what's next? Reach out to discuss your project or to learn more about how we work.</p>
+                <div class="flex items-center justify-center">
+                    <div class="relative inline-block group">
+                         <div id="email-address" class="bg-gray-700 text-white font-mono py-3 px-6 rounded-lg cursor-pointer text-sm">
+                            matthew@dubyahinnovation.com
+                        </div>
+                        <div id="copy-tooltip" class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-gray-600 text-white text-xs py-1 px-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                            Click to copy
+                        </div>
+                        <div id="copy-success" class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs py-1 px-2 rounded-md opacity-0 transition-opacity duration-300">
+                            Copied!
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6 mt-12">
+                     <a href="https://www.linkedin.com/company/dubyah-innovation/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Dubyah Innovation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a navigation link is clicked
+        document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Add a small delay to allow for scroll behavior to start
+                setTimeout(() => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                    }
+                }, 100);
+            });
+        });
+
+        // --- Copy Email to Clipboard ---
+        const emailDiv = document.getElementById('email-address');
+        const copySuccessMessage = document.getElementById('copy-success');
+        const copyTooltip = document.getElementById('copy-tooltip');
+        
+        emailDiv.addEventListener('click', () => {
+            const email = emailDiv.textContent.trim();
+            const textArea = document.createElement('textarea');
+            textArea.value = email;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                copyTooltip.style.opacity = '0'; 
+                copySuccessMessage.style.opacity = '1';
+                setTimeout(() => {
+                    copySuccessMessage.style.opacity = '0';
+                    copyTooltip.style.opacity = '';
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy email: ', err);
+                copyTooltip.textContent = 'Failed to copy!';
+            }
+            document.body.removeChild(textArea);
+        });
+
+        // --- Fade-in Sections on Scroll ---
+        const sections = document.querySelectorAll('.fade-in-section');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+
