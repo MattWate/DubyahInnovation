@@ -32,6 +32,27 @@
                 radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.10) 0px, transparent 50%);
             position: relative;
         }
+        .form-input {
+            width: 100%;
+            border-radius: 0.75rem;
+            border: 1px solid #374151;
+            background: #111827;
+            color: white;
+            padding: 0.85rem 1rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .form-input:focus {
+            border-color: #22d3ee;
+            box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.16);
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.45rem;
+            color: #d1d5db;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
@@ -219,22 +240,90 @@
         </section>
 
         <section id="contact" class="py-20 fade-in-section bg-black">
-            <div class="container mx-auto px-6 text-center">
-                <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent mb-3">Start a conversation</p>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Have a problem worth solving?</h2>
-                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Bring us your challenge, objective or rough idea. We will help you make sense of it, shape the opportunity and identify the fastest practical path forward.</p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="mailto:matthew@dubyahinnovation.com" class="bg-cyan-accent hover:bg-cyan-accent-hover text-gray-950 font-bold py-3 px-8 rounded-full transition-all duration-300">Email Dubyah</a>
-                    <div class="relative inline-block group">
-                        <div id="email-address" class="bg-gray-800 border border-gray-700 text-white font-mono py-3 px-6 rounded-full cursor-pointer text-sm">matthew@dubyahinnovation.com</div>
-                        <div id="copy-tooltip" class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-gray-600 text-white text-xs py-1 px-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Click to copy</div>
-                        <div id="copy-success" class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs py-1 px-2 rounded-md opacity-0 transition-opacity duration-300">Copied!</div>
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent mb-3">Start a conversation</p>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Have a problem worth solving?</h2>
+                        <p class="text-lg text-gray-300 mb-6 max-w-2xl">Tell us what you are trying to change, build, improve or automate. A rough problem is enough. We can help shape it from there.</p>
+                        <div class="space-y-4 text-gray-400">
+                            <p><span class="text-white font-bold">Good enquiries include:</span> AI workflows, MVP builds, UX research, internal tools, automation, digital product ideas, process improvement and partnership opportunities.</p>
+                            <p>You can also email directly if that is easier.</p>
+                        </div>
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                            <a href="mailto:matthew@dubyahinnovation.com" class="bg-gray-800 border border-gray-700 hover:border-cyan-accent text-white font-bold py-3 px-6 rounded-full transition-all duration-300">matthew@dubyahinnovation.com</a>
+                            <a href="https://www.linkedin.com/company/dubyah-innovation/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300 font-bold">LinkedIn →</a>
+                        </div>
                     </div>
-                </div>
-                <div class="flex justify-center space-x-6 mt-12">
-                    <a href="https://www.linkedin.com/company/dubyah-innovation/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
+
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 md:p-8 text-left">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>Do not fill this out if you are human: <input name="bot-field"></label>
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="form-label">Name</label>
+                                <input class="form-input" type="text" id="name" name="name" autocomplete="name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="form-label">Email</label>
+                                <input class="form-input" type="email" id="email" name="email" autocomplete="email" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+                            <div>
+                                <label for="company" class="form-label">Company</label>
+                                <input class="form-input" type="text" id="company" name="company" autocomplete="organization">
+                            </div>
+                            <div>
+                                <label for="enquiry-type" class="form-label">What do you need help with?</label>
+                                <select class="form-input" id="enquiry-type" name="enquiry-type" required>
+                                    <option value="">Select one</option>
+                                    <option>Consulting & innovation advisory</option>
+                                    <option>Product or solution build</option>
+                                    <option>AI agents & automation</option>
+                                    <option>UX research or service design</option>
+                                    <option>Partnership conversation</option>
+                                    <option>Not sure yet</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+                            <div>
+                                <label for="timeline" class="form-label">Timeline</label>
+                                <select class="form-input" id="timeline" name="timeline">
+                                    <option value="">Select one</option>
+                                    <option>As soon as possible</option>
+                                    <option>In the next month</option>
+                                    <option>In the next 3 months</option>
+                                    <option>Still exploring</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="budget" class="form-label">Budget range</label>
+                                <select class="form-input" id="budget" name="budget">
+                                    <option value="">Optional</option>
+                                    <option>Under R25k</option>
+                                    <option>R25k - R75k</option>
+                                    <option>R75k - R150k</option>
+                                    <option>R150k+</option>
+                                    <option>Not sure yet</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <label for="message" class="form-label">Tell us about the problem, idea or opportunity</label>
+                            <textarea class="form-input min-h-[150px]" id="message" name="message" rows="6" required placeholder="A short description is enough. What is happening, what are you trying to improve, and what would progress look like?"></textarea>
+                        </div>
+
+                        <button type="submit" class="mt-6 w-full bg-cyan-accent hover:bg-cyan-accent-hover text-gray-950 font-bold py-3 px-8 rounded-full transition-all duration-300">Send enquiry</button>
+                        <p class="text-gray-500 text-xs mt-4 text-center">This form sends your enquiry securely via Netlify Forms.</p>
+                    </form>
                 </div>
             </div>
         </section>
@@ -254,26 +343,6 @@
             link.addEventListener('click', () => {
                 setTimeout(() => { if (!mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); } }, 100);
             });
-        });
-        const emailDiv = document.getElementById('email-address');
-        const copySuccessMessage = document.getElementById('copy-success');
-        const copyTooltip = document.getElementById('copy-tooltip');
-        emailDiv.addEventListener('click', () => {
-            const email = emailDiv.textContent.trim();
-            const textArea = document.createElement('textarea');
-            textArea.value = email;
-            document.body.appendChild(textArea);
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                copyTooltip.style.opacity = '0';
-                copySuccessMessage.style.opacity = '1';
-                setTimeout(() => { copySuccessMessage.style.opacity = '0'; copyTooltip.style.opacity = ''; }, 2000);
-            } catch (err) {
-                console.error('Failed to copy email: ', err);
-                copyTooltip.textContent = 'Failed to copy!';
-            }
-            document.body.removeChild(textArea);
         });
         const sections = document.querySelectorAll('.fade-in-section');
         const observer = new IntersectionObserver((entries, observer) => {
