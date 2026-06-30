@@ -3,261 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dubyah Innovation | Problem Solving, Product Build & AI Agents</title>
-    <meta name="description" content="Dubyah Innovation helps organisations move from problem to progress through consulting, product and solution build, and practical AI agent development.">
-    <!-- Tailwind CSS for styling -->
+    <title>Dubyah Innovation | Strategy, Product Build & Practical AI</title>
+    <meta name="description" content="Dubyah Innovation helps organisations turn unclear problems into practical digital, AI and product solutions through strategy, UX, automation and rapid product build.">
+    <link rel="icon" type="image/png" href="assets/dubyah-logo.png">
+    <link rel="shortcut icon" type="image/png" href="assets/dubyah-logo.png">
+    <link rel="apple-touch-icon" href="assets/dubyah-logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0c0a09;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #0c0a09; }
         .text-cyan-accent { color: #22d3ee; }
         .bg-cyan-accent { background-color: #22d3ee; }
         .hover\:bg-cyan-accent-hover:hover { background-color: #06b6d4; }
         .border-cyan-accent { border-color: #22d3ee; }
-
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
+        .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
         .hero-bg {
             background-color: #0c0a09;
             background-image:
-                radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 52% 99%, hsla(355, 98%, 76%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 10% 29%, hsla(256, 96%, 68%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.1) 0px, transparent 50%),
-                radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.1) 0px, transparent 50%);
+                radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.14) 0px, transparent 50%),
+                radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.10) 0px, transparent 50%),
+                radial-gradient(at 52% 99%, hsla(355, 98%, 76%, 0.10) 0px, transparent 50%),
+                radial-gradient(at 10% 29%, hsla(256, 96%, 68%, 0.12) 0px, transparent 50%),
+                radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.10) 0px, transparent 50%),
+                radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.10) 0px, transparent 50%),
+                radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.10) 0px, transparent 50%);
             position: relative;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
-
-    <!-- Header and Navigation Bar -->
-    <header class="bg-black/50 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-800">
+    <header class="bg-black/60 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-800">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-extrabold text-white">
+            <a href="index.html" class="text-2xl font-extrabold text-white" aria-label="Dubyah Innovation home">
                 <img src="assets/dubyah-logo.png" alt="Dubyah Innovation Logo" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/150x40/000000/FFFFFF?text=Dubyah.';">
             </a>
-            <nav class="hidden md:flex space-x-8">
+            <nav class="hidden lg:flex space-x-7 text-sm">
                 <a href="#services" class="hover:text-cyan-accent transition-colors duration-300">What We Do</a>
-                <a href="#work" class="hover:text-cyan-accent transition-colors duration-300">Work</a>
+                <a href="#use-cases" class="hover:text-cyan-accent transition-colors duration-300">Use Cases</a>
                 <a href="#how-we-work" class="hover:text-cyan-accent transition-colors duration-300">How We Work</a>
+                <a href="#clients" class="hover:text-cyan-accent transition-colors duration-300">Customers</a>
+                <a href="#partnerships" class="hover:text-cyan-accent transition-colors duration-300">Partnerships</a>
                 <a href="#contact" class="hover:text-cyan-accent transition-colors duration-300">Contact</a>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Open mobile menu">
+            <a href="#contact" class="hidden md:inline-block bg-cyan-accent hover:bg-cyan-accent-hover text-gray-950 font-bold py-2 px-5 rounded-full text-sm transition-all duration-300">Start a Conversation</a>
+            <button id="mobile-menu-button" class="lg:hidden focus:outline-none" aria-label="Open mobile menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pt-2 pb-4 bg-black/95">
             <a href="#services" class="block py-2 text-center hover:bg-gray-800 rounded">What We Do</a>
-            <a href="#work" class="block py-2 text-center hover:bg-gray-800 rounded">Work</a>
+            <a href="#use-cases" class="block py-2 text-center hover:bg-gray-800 rounded">Use Cases</a>
             <a href="#how-we-work" class="block py-2 text-center hover:bg-gray-800 rounded">How We Work</a>
+            <a href="#clients" class="block py-2 text-center hover:bg-gray-800 rounded">Customers</a>
+            <a href="#partnerships" class="block py-2 text-center hover:bg-gray-800 rounded">Partnerships</a>
             <a href="#contact" class="block py-2 text-center hover:bg-gray-800 rounded">Contact</a>
         </div>
     </header>
 
     <main class="pt-20">
-        <!-- Hero Section -->
         <section id="hero" class="hero-bg">
-            <div class="container mx-auto px-6 py-24 md:py-40 text-center relative z-10">
-                <div class="max-w-5xl mx-auto">
-                    <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent mb-4">Problem solving. Product build. Practical AI.</p>
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">Dubyah helps organisations move from problem to progress.</h1>
-                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with teams that have a problem statement, objective or challenge and need a solution-oriented partner who can help them make sense of it, shape the opportunity and move forward quickly.</p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#contact" class="bg-cyan-accent hover:bg-cyan-accent-hover text-gray-900 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-block">Bring Us a Problem</a>
-                        <a href="#services" class="border border-cyan-accent text-cyan-accent hover:bg-cyan-accent hover:text-gray-900 font-bold py-3 px-8 rounded-full transition-all duration-300 inline-block">See What We Do</a>
+            <div class="container mx-auto px-6 py-24 md:py-36 relative z-10">
+                <div class="max-w-5xl">
+                    <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent mb-4">Strategy. Product build. Practical AI.</p>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">From messy problem to working solution.</h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl">Dubyah helps organisations define, design and build practical digital and AI-enabled solutions. We work where strategy, user experience, automation and rapid product delivery meet.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-cyan-accent hover:bg-cyan-accent-hover text-gray-950 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 inline-block text-center">Bring Us a Problem</a>
+                        <a href="#services" class="border border-cyan-accent text-cyan-accent hover:bg-cyan-accent hover:text-gray-950 font-bold py-3 px-8 rounded-full transition-all duration-300 inline-block text-center">Explore the Offer</a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 max-w-5xl">
+                    <div class="bg-black/40 border border-gray-800 rounded-2xl p-5">
+                        <p class="text-cyan-accent font-bold mb-2">For unclear opportunities</p>
+                        <p class="text-gray-400 text-sm">Turn ambition, friction or uncertainty into a focused plan of action.</p>
+                    </div>
+                    <div class="bg-black/40 border border-gray-800 rounded-2xl p-5">
+                        <p class="text-cyan-accent font-bold mb-2">For products and tools</p>
+                        <p class="text-gray-400 text-sm">Move quickly from idea to prototype, MVP, platform or internal workflow.</p>
+                    </div>
+                    <div class="bg-black/40 border border-gray-800 rounded-2xl p-5">
+                        <p class="text-cyan-accent font-bold mb-2">For useful AI</p>
+                        <p class="text-gray-400 text-sm">Build AI agents and automations that fit real work, not vague hype.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Intro Section -->
+
         <section class="py-20 bg-black fade-in-section">
             <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl md:text-4xl font-bold max-w-4xl mx-auto text-white">We are not here to sell innovation theatre. We are here to solve useful problems.</h2>
-                 <p class="text-gray-400 mt-6 max-w-3xl mx-auto">Dubyah combines strategic thinking, human-centred design, rapid product development and practical AI implementation. Sometimes that means a focused advisory engagement. Sometimes it means building a product, platform or website. Sometimes it means designing an AI agent that can take real work off your team's plate.</p>
+                <h2 class="text-3xl md:text-4xl font-bold max-w-4xl mx-auto text-white">Dubyah is for teams that need progress, not consulting theatre.</h2>
+                <p class="text-gray-400 mt-6 max-w-3xl mx-auto text-lg">We help clients understand the problem, shape the opportunity, design the experience and build the thing that moves the business forward. Sometimes that is a strategy sprint. Sometimes it is an MVP. Sometimes it is a practical AI agent that removes hours of manual work.</p>
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="py-20 fade-in-section bg-gray-900/50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent">What we do</p>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Three ways we help clients move forward</h2>
-                    <p class="text-lg text-gray-400 mt-3 max-w-3xl mx-auto">We meet clients at the point of need: understanding the problem, building the solution, or using AI to create new capability.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Three clear ways Dubyah can help</h2>
+                    <p class="text-lg text-gray-400 mt-3 max-w-3xl mx-auto">The offer is intentionally flexible, but the outcomes are specific: clarity, momentum, working tools and better decisions.</p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                    <article class="bg-gray-800 p-8 rounded-2xl border border-gray-700 flex flex-col">
                         <p class="text-sm font-bold text-cyan-accent mb-3">01</p>
                         <h3 class="text-2xl font-bold mb-4 text-white">Consulting & Innovation Advisory</h3>
-                        <p class="text-gray-400 mb-6">We help teams make sense of complex challenges, uncover opportunities and create clear, practical plans for action.</p>
-                        <ul class="space-y-3 text-gray-300 text-sm">
-                            <li>Innovation strategy and facilitation</li>
+                        <p class="text-gray-400 mb-6">For teams that know something needs to change, but need sharper thinking, better evidence and a practical path forward.</p>
+                        <ul class="space-y-3 text-gray-300 text-sm mb-8">
+                            <li>Innovation and AI opportunity strategy</li>
                             <li>UX research and service design</li>
-                            <li>Digital transformation advisory</li>
                             <li>Process review and problem framing</li>
-                            <li>Rapid validation and delivery roadmaps</li>
+                            <li>Transformation roadmaps and facilitation</li>
                         </ul>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                        <a href="consulting.html" class="mt-auto text-cyan-accent font-bold hover:text-white">View consulting offer →</a>
+                    </article>
+                    <article class="bg-gray-800 p-8 rounded-2xl border border-gray-700 flex flex-col">
                         <p class="text-sm font-bold text-cyan-accent mb-3">02</p>
                         <h3 class="text-2xl font-bold mb-4 text-white">Product & Solution Build</h3>
-                        <p class="text-gray-400 mb-6">We design and build digital products, platforms, websites and bespoke tools that help organisations work better and serve users better.</p>
-                        <ul class="space-y-3 text-gray-300 text-sm">
+                        <p class="text-gray-400 mb-6">For businesses that need more than a deck: MVPs, digital tools, portals, dashboards, websites and bespoke systems.</p>
+                        <ul class="space-y-3 text-gray-300 text-sm mb-8">
                             <li>MVPs and early-stage products</li>
-                            <li>Bespoke websites and digital experiences</li>
-                            <li>Internal workflow tools and dashboards</li>
-                            <li>Operational and compliance platforms</li>
-                            <li>Lightweight portals and client-facing systems</li>
+                            <li>Internal tools and workflow systems</li>
+                            <li>Websites and client-facing portals</li>
+                            <li>Dashboards, admin tools and lightweight platforms</li>
                         </ul>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                        <a href="product-build.html" class="mt-auto text-cyan-accent font-bold hover:text-white">View build offer →</a>
+                    </article>
+                    <article class="bg-gray-800 p-8 rounded-2xl border border-gray-700 flex flex-col">
                         <p class="text-sm font-bold text-cyan-accent mb-3">03</p>
                         <h3 class="text-2xl font-bold mb-4 text-white">AI Agents & Automation</h3>
-                        <p class="text-gray-400 mb-6">We build practical AI-powered agents and automated workflows for clients who want useful AI capability without the heavy consultancy cost.</p>
-                        <ul class="space-y-3 text-gray-300 text-sm">
+                        <p class="text-gray-400 mb-6">For teams that want AI to do useful work: triage, drafting, analysis, workflow support and knowledge assistance.</p>
+                        <ul class="space-y-3 text-gray-300 text-sm mb-8">
                             <li>Client intake and triage agents</li>
                             <li>Document drafting and review workflows</li>
-                            <li>Research and insight synthesis tools</li>
-                            <li>Internal knowledge assistants</li>
+                            <li>Research and insight synthesis</li>
                             <li>Human-in-the-loop automation</li>
                         </ul>
-                    </div>
+                        <a href="ai-agents.html" class="mt-auto text-cyan-accent font-bold hover:text-white">View AI offer →</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Problem First Section -->
-        <section class="py-20 bg-black fade-in-section">
+        <section id="use-cases" class="py-20 bg-black fade-in-section">
             <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center">
+                <div class="max-w-4xl mx-auto text-center mb-12">
                     <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent">Start with the problem</p>
                     <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">You do not need to know the solution before you speak to us.</h2>
-                    <p class="text-gray-400 mt-6 text-lg">Some clients arrive with a clear brief. Others arrive with a broken process, a frustrated team, an ambitious idea, or a business objective they cannot yet translate into action. That is exactly where Dubyah is useful.</p>
-                    <p class="text-gray-400 mt-4 text-lg">We help you understand what is really going on, identify the right opportunity and move quickly towards something practical.</p>
+                    <p class="text-gray-400 mt-6 text-lg">Some clients arrive with a clear brief. Others arrive with a broken process, a frustrated team, an ambitious idea or a business objective they cannot yet translate into action.</p>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Work Section -->
-        <section id="work" class="py-20 fade-in-section bg-gray-900/50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent">The kind of work we do</p>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Specific value, without unnecessary theatre</h2>
-                    <p class="text-lg text-gray-400 mt-3 max-w-3xl mx-auto">Much of our work is confidential, so we speak carefully about the detail. The value is clear: better decisions, faster delivery, reduced manual effort and more useful digital capability.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-cyan-accent">AI-enabled client workflows</h3>
-                        <p class="text-gray-400">Helping professional services firms capture information, assess needs, generate structured outputs and reduce manual admin while keeping experts in control.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-cyan-accent">Operational platforms</h3>
-                        <p class="text-gray-400">Creating tools that improve visibility, accountability and reporting across teams, sites, tasks and service delivery environments.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-cyan-accent">Learning and knowledge products</h3>
-                        <p class="text-gray-400">Building products that help people learn, practise, assess progress and access support in more personalised and scalable ways.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-cyan-accent">Transformation and process advisory</h3>
-                        <p class="text-gray-400">Helping organisations understand current-state complexity, redesign workflows and make better decisions about technology investment.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-cyan-accent">Bespoke digital experiences</h3>
-                        <p class="text-gray-400">Designing and building practical websites, portals and digital tools for businesses that need more than a generic online presence.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <h3 class="text-xl font-bold mb-3 text-cyan-accent">Rapid opportunity validation</h3>
-                        <p class="text-gray-400">Turning uncertain ideas into clearer concepts, testable prototypes and evidence-based next steps before heavy investment is committed.</p>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">“We need to use AI, but properly.”</h3><p class="text-gray-400 text-sm">We identify practical use cases, prioritise them and build capability around real workflows.</p></div>
+                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">“Our process is too manual.”</h3><p class="text-gray-400 text-sm">We map the work, find friction, redesign the flow and automate where it makes sense.</p></div>
+                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">“We have an idea, but need to test it.”</h3><p class="text-gray-400 text-sm">We turn rough ideas into prototypes, MVPs and evidence-based next steps.</p></div>
+                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">“Our digital experience is not converting.”</h3><p class="text-gray-400 text-sm">We use UX thinking, content clarity and practical design to improve user journeys.</p></div>
+                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">“We need a system, not another spreadsheet.”</h3><p class="text-gray-400 text-sm">We build lightweight tools that create visibility, accountability and better reporting.</p></div>
+                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">“We need help shaping the brief.”</h3><p class="text-gray-400 text-sm">We help teams clarify requirements before they spend heavily on delivery.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- How We Work Section -->
         <section id="how-we-work" class="py-20 bg-cyan-accent/10 fade-in-section">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent">How we work</p>
                     <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Understand. Shape. Build. Improve.</h2>
-                    <p class="text-lg text-gray-400 mt-3 max-w-3xl mx-auto">We do not consult from the sidelines. We plug in quickly, work with your team and focus on momentum.</p>
+                    <p class="text-lg text-gray-400 mt-3 max-w-3xl mx-auto">We plug in quickly, work with your team and focus on momentum. The goal is to leave behind useful capability, not dependency.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div>
-                        <h3 class="text-xl font-bold mb-2 text-white">01 Understand</h3>
-                        <p class="text-gray-400">We get close to the problem, the users, the process and the business pressure behind the work.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2 text-white">02 Shape</h3>
-                        <p class="text-gray-400">We turn messy inputs into clear opportunities, practical options and a direction your team can act on.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2 text-white">03 Build</h3>
-                        <p class="text-gray-400">Where useful, we move beyond slides into prototypes, products, automations and working digital tools.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2 text-white">04 Improve</h3>
-                        <p class="text-gray-400">We test, learn and refine so the solution keeps getting closer to what the business and users actually need.</p>
-                    </div>
+                    <div class="bg-black/30 p-6 rounded-2xl border border-gray-800"><h3 class="text-xl font-bold mb-2 text-white">01 Understand</h3><p class="text-gray-400">We get close to the business pressure, the users, the process and the constraints.</p></div>
+                    <div class="bg-black/30 p-6 rounded-2xl border border-gray-800"><h3 class="text-xl font-bold mb-2 text-white">02 Shape</h3><p class="text-gray-400">We turn messy inputs into clear opportunities, practical options and a direction your team can act on.</p></div>
+                    <div class="bg-black/30 p-6 rounded-2xl border border-gray-800"><h3 class="text-xl font-bold mb-2 text-white">03 Build</h3><p class="text-gray-400">Where useful, we move beyond slides into prototypes, products, automations and working tools.</p></div>
+                    <div class="bg-black/30 p-6 rounded-2xl border border-gray-800"><h3 class="text-xl font-bold mb-2 text-white">04 Improve</h3><p class="text-gray-400">We test, learn and refine so the solution keeps getting closer to what the business and users actually need.</p></div>
                 </div>
-                 <p class="text-center text-gray-300 mt-12 max-w-3xl mx-auto">No black boxes. No bloated decks. No technology for technology's sake. Just clear thinking, fast validation and practical outcomes.</p>
             </div>
         </section>
-        
-        <!-- Clients Section -->
+
         <section id="clients" class="py-20 bg-black fade-in-section">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-12 text-white">Who we've worked with</h2>
+                <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent mb-3">Customers</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Organisations we have worked with</h2>
+                <p class="text-gray-400 max-w-3xl mx-auto mb-12">Dubyah has supported work across healthcare, technology, public sector, education, professional services and business transformation environments.</p>
                 <div class="flex flex-wrap justify-center items-center gap-x-12 md:gap-x-20 gap-y-10">
                     <img src="assets/the-aurum-institute-logo.png" alt="The Aurum Institute Logo" class="h-24 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/200x60/000000/FFFFFF?text=THE+AURUM+INSTITUTE';">
                     <img src="assets/tforge-logo.png" alt="TForge Logo" class="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/150x60/000000/FFFFFF?text=TFORGE';">
                     <img src="assets/axis-solutions-logo.png" alt="Axis Solutions Logo" class="h-24 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/200x60/000000/FFFFFF?text=Axis+Solutions';">
                     <img src="assets/oryx-it-solutions-logo.png" alt="Oryx IT Solutions Logo" class="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/200x60/000000/FFFFFF?text=ORYX+IT+SOLUTIONS';">
                 </div>
+                <p class="text-gray-500 text-sm mt-10">Additional customer logos can be added here as soon as the assets are available.</p>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 fade-in-section bg-gray-900/50">
+        <section id="partnerships" class="py-20 fade-in-section bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent mb-3">Partnerships</p>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">We partner where it creates better outcomes.</h2>
+                        <p class="text-gray-400 text-lg mb-5">Dubyah works well as a specialist partner to consulting firms, software teams, agencies and implementation partners that need strategy, UX, AI or rapid product capability around a client opportunity.</p>
+                        <p class="text-gray-400 text-lg">We can plug into discovery, shape propositions, lead workshops, create prototypes, design user journeys, build MVPs or support practical AI delivery.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">For consulting partners</h3><p class="text-gray-400 text-sm">Add hands-on innovation, UX, product and AI delivery capability to client engagements.</p></div>
+                        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">For technology partners</h3><p class="text-gray-400 text-sm">Strengthen discovery, adoption, experience design and business-facing solution shaping.</p></div>
+                        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">For agencies</h3><p class="text-gray-400 text-sm">Bring deeper strategy, AI and product thinking into client digital work.</p></div>
+                        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl"><h3 class="font-bold text-white mb-2">For founders</h3><p class="text-gray-400 text-sm">Turn early ideas into sharper propositions, testable MVPs and investor-ready narratives.</p></div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="partnerships.html" class="text-cyan-accent font-bold hover:text-white">Explore partnership options →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 fade-in-section bg-black">
             <div class="container mx-auto px-6 text-center">
                 <p class="text-sm font-bold uppercase tracking-wider text-cyan-accent mb-3">Start a conversation</p>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Have a problem worth solving?</h2>
                 <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Bring us your challenge, objective or rough idea. We will help you make sense of it, shape the opportunity and identify the fastest practical path forward.</p>
-                <div class="flex items-center justify-center">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="mailto:matthew@dubyahinnovation.com" class="bg-cyan-accent hover:bg-cyan-accent-hover text-gray-950 font-bold py-3 px-8 rounded-full transition-all duration-300">Email Dubyah</a>
                     <div class="relative inline-block group">
-                         <div id="email-address" class="bg-gray-700 text-white font-mono py-3 px-6 rounded-lg cursor-pointer text-sm">
-                            matthew@dubyahinnovation.com
-                        </div>
-                        <div id="copy-tooltip" class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-gray-600 text-white text-xs py-1 px-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                            Click to copy
-                        </div>
-                        <div id="copy-success" class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs py-1 px-2 rounded-md opacity-0 transition-opacity duration-300">
-                            Copied!
-                        </div>
+                        <div id="email-address" class="bg-gray-800 border border-gray-700 text-white font-mono py-3 px-6 rounded-full cursor-pointer text-sm">matthew@dubyahinnovation.com</div>
+                        <div id="copy-tooltip" class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-gray-600 text-white text-xs py-1 px-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Click to copy</div>
+                        <div id="copy-success" class="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs py-1 px-2 rounded-md opacity-0 transition-opacity duration-300">Copied!</div>
                     </div>
                 </div>
-                
                 <div class="flex justify-center space-x-6 mt-12">
-                     <a href="https://www.linkedin.com/company/dubyah-innovation/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/dubyah-innovation/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
                 </div>
@@ -272,29 +247,17 @@
     </footer>
 
     <script>
-        // --- Mobile Menu ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a navigation link is clicked
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
             link.addEventListener('click', () => {
-                setTimeout(() => {
-                    if (!mobileMenu.classList.contains('hidden')) {
-                         mobileMenu.classList.add('hidden');
-                    }
-                }, 100);
+                setTimeout(() => { if (!mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); } }, 100);
             });
         });
-
-        // --- Copy Email to Clipboard ---
         const emailDiv = document.getElementById('email-address');
         const copySuccessMessage = document.getElementById('copy-success');
         const copyTooltip = document.getElementById('copy-tooltip');
-        
         emailDiv.addEventListener('click', () => {
             const email = emailDiv.textContent.trim();
             const textArea = document.createElement('textarea');
@@ -303,27 +266,16 @@
             textArea.select();
             try {
                 document.execCommand('copy');
-                copyTooltip.style.opacity = '0'; 
+                copyTooltip.style.opacity = '0';
                 copySuccessMessage.style.opacity = '1';
-                setTimeout(() => {
-                    copySuccessMessage.style.opacity = '0';
-                    copyTooltip.style.opacity = '';
-                }, 2000);
+                setTimeout(() => { copySuccessMessage.style.opacity = '0'; copyTooltip.style.opacity = ''; }, 2000);
             } catch (err) {
                 console.error('Failed to copy email: ', err);
                 copyTooltip.textContent = 'Failed to copy!';
             }
             document.body.removeChild(textArea);
         });
-
-        // --- Fade-in Sections on Scroll ---
         const sections = document.querySelectorAll('.fade-in-section');
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -331,11 +283,8 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
+        }, { root: null, rootMargin: '0px', threshold: 0.1 });
+        sections.forEach(section => { observer.observe(section); });
     </script>
 </body>
 </html>
